@@ -60,7 +60,7 @@ SELECT `school_db_student`.`id`,
 def problem_one(request):
 
     print('Hello everyone')
-    students = Student.objects.filter(gpa__gte=3).order_by('-gpa') 
+    students = Student.objects.filter(gpa__gt=3).order_by('-gpa') 
 
     for student in students:
         print(f'Full Name: {student.first_name} {student.last_name} GPA: {student.gpa}')
@@ -104,6 +104,18 @@ SELECT `school_db_student`.`id`,
 # Print out the instructor's full name and hire date to the terminal
 def problem_two(request):
 
+
+
+
+
+
+
+
+# print('Hello everyone')
+#     students = Student.objects.filter(gpa__gte=3).order_by('-gpa') 
+
+#     for student in students:
+#         print(f'Full Name: {student.first_name} {student.last_name} GPA: {student.gpa}')
 
 
     return complete(request)
